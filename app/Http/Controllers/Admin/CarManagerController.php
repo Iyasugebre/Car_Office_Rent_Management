@@ -1,0 +1,67 @@
+<?php
+
+namespace App\Http\Controllers\Admin;
+
+use App\Http\Controllers\Controller;
+use App\Models\Car;
+use App\Models\Office;
+use Illuminate\Http\Request;
+
+class CarManagerController extends Controller
+{
+    public function index()
+    {
+        $cars = Car::with('office')->latest()->paginate(10);
+        return view('admin.cars.index', compact('cars'));
+    }
+
+    public function create()
+    {
+        $offices = Office::all();
+        return view('admin.cars.create', compact('offices'));
+    }
+
+    public function store(Request $request)
+    {
+        $validated = $request->validate([
+            'office_id' => 'required|exists:offices,id',
+            'make' => 'required|string',
+            'model' => 'required|string',
+            'year' => 'required|integer',
+            'plate_number' => 'required|string|unique:cars,plate_number',
+            'price_per_day' => 'required|numeric',
+            'status' => 'required|string',
+        ]);
+
+        Car::create($validated);
+        return redirect()->route('admin.cars.index')->with('success', 'Car created successfully.');
+    }
+
+    public function edit(Car $car)
+    {
+        $offices = Office::all();
+        return view('admin.cars.edit', compact('car', 'offices'));
+    }
+
+    public function update(Request $request, Car $car)
+    {
+        $validated = $request->validate([
+            'office_id' => 'required|exists:offices,id',
+            'make' => 'required|string',
+            'model' => 'required|string',
+            'year' => 'required|integer',
+            'plate_number' => 'required|string|unique:cars,plate_number,' . $car->id,
+            'price_per_day' => 'required|numeric',
+            'status' => 'required|string',
+        ]);
+
+        $car->update($validated);
+        return redirect()->route('admin.cars.index')->with('success', 'Car updated successfully.');
+    }
+
+    public function destroy(Car $car)
+    {
+        $car->delete();
+        return redirect()->route('admin.cars.index')->with('success', 'Car deleted successfully.');
+    }
+}
