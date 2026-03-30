@@ -25,6 +25,7 @@
                         <th>Plate Number</th>
                         <th>Location</th>
                         <th>Price/Day</th>
+                        <th>Mileage</th>
                         <th>Status</th>
                         <th>Actions</th>
                     </tr>
@@ -44,6 +45,12 @@
                                 </span>
                             </td>
                             <td style="font-weight: 600;">${{ number_format($car->price_per_day, 2) }}</td>
+                            <td>
+                                <div style="font-size: 0.875rem;">{{ number_format($car->mileage) }} km</div>
+                                @if($car->last_service_date)
+                                <div style="font-size: 0.70rem; color: var(--text-muted);">Last Svc: {{ \Carbon\Carbon::parse($car->last_service_date)->format('M d, Y') }}</div>
+                                @endif
+                            </td>
                             <td>
                                 <span class="status-badge status-{{ strtolower($car->status) }}">
                                     {{ ucfirst($car->status) }}
@@ -66,7 +73,7 @@
                         </tr>
                     @empty
                         <tr>
-                            <td colspan="6" style="text-align: center; color: var(--text-muted); padding: 3rem;">No cars found in inventory.</td>
+                            <td colspan="7" style="text-align: center; color: var(--text-muted); padding: 3rem;">No cars found in inventory.</td>
                         </tr>
                     @endforelse
                 </tbody>

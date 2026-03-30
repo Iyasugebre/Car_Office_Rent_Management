@@ -115,6 +115,7 @@
                     </div>
 
                         {{-- Branch Activation Banner --}}
+                        @if($agreement->legal_status == 'approved')
                         @php
                             $registeredBranch = \App\Models\Office::where('name', $agreement->branchRequest->branch_name)
                                 ->where('address', $agreement->property_address)
@@ -142,7 +143,7 @@
                                 </div>
                             </div>
                         </div>
-                    @endif
+                        @endif
 
                     @if($agreement->contract_path)
                         <div style="margin-top: 2rem; padding: 1.5rem; background: #f8fafc; border-radius: 1rem; border: 1px solid var(--border-color); display: flex; align-items: center; justify-content: space-between;">

@@ -19,6 +19,9 @@ class Car extends Model
         'price_per_day',
         'status',
         'image_url',
+        'mileage',
+        'last_service_date',
+        'last_service_mileage',
     ];
 
     public function office()

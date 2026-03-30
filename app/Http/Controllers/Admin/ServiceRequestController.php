@@ -97,8 +97,13 @@ class ServiceRequestController extends Controller
             'cost' => $validated['cost'],
         ]);
 
-        // Car is available again
-        $service->car->update(['status' => 'available']);
+        // Car is available again. Also log the maintenance tracker for Periodic Tracking
+        $carUpdates = ['status' => 'available'];
+        if (in_array($service->service_type, ['routine', 'inspection'])) {
+            $carUpdates['last_service_date'] = now();
+            $carUpdates['last_service_mileage'] = $service->car->mileage;
+        }
+        $service->car->update($carUpdates);
 
         return redirect()->route('admin.services.show', $service)->with('success', 'Service completed. Vehicle maintenance history updated.');
     }

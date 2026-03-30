@@ -49,6 +49,14 @@
                             <option value="maintenance">Maintenance</option>
                         </select>
                     </div>
+                    <div>
+                        <label style="display: block; font-size: 0.875rem; font-weight: 500; margin-bottom: 0.5rem;">Current Mileage (km)</label>
+                        <input type="number" name="mileage" value="0" min="0" style="width: 100%; padding: 0.75rem; border-radius: 0.5rem; border: 1px solid var(--border-color);">
+                    </div>
+                    <div>
+                        <label style="display: block; font-size: 0.875rem; font-weight: 500; margin-bottom: 0.5rem;">Last Service Date</label>
+                        <input type="date" name="last_service_date" style="width: 100%; padding: 0.75rem; border-radius: 0.5rem; border: 1px solid var(--border-color);">
+                    </div>
                 </div>
 
                 <div style="margin-top: 2rem; display: flex; justify-content: flex-end;">

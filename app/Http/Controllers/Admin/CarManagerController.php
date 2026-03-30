@@ -31,7 +31,11 @@ class CarManagerController extends Controller
             'plate_number' => 'required|string|unique:cars,plate_number',
             'price_per_day' => 'required|numeric',
             'status' => 'required|string',
+            'mileage' => 'nullable|integer|min:0',
+            'last_service_date' => 'nullable|date',
         ]);
+
+        $validated['last_service_mileage'] = $validated['mileage'] ?? 0;
 
         Car::create($validated);
         return redirect()->route('admin.cars.index')->with('success', 'Car created successfully.');
@@ -53,6 +57,8 @@ class CarManagerController extends Controller
             'plate_number' => 'required|string|unique:cars,plate_number,' . $car->id,
             'price_per_day' => 'required|numeric',
             'status' => 'required|string',
+            'mileage' => 'nullable|integer|min:0',
+            'last_service_date' => 'nullable|date',
         ]);
 
         $car->update($validated);
