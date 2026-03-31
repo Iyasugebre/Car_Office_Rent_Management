@@ -41,4 +41,9 @@ RUN chown -R www-data:www-data /var/www/html/storage /var/www/html/bootstrap/cac
 RUN touch /var/www/html/database/database.sqlite
 RUN chown -R www-data:www-data /var/www/html/database
 
+# Make our startup script executable
+RUN chmod +x /var/www/html/start.sh
+
 EXPOSE 80
+
+CMD ["/var/www/html/start.sh"]
