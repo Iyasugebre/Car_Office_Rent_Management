@@ -5,13 +5,16 @@ RUN apt-get update && apt-get install -y \
     libpng-dev \
     libjpeg-dev \
     libfreetype6-dev \
+    libicu-dev \
+    libzip-dev \
     zip \
     unzip \
     git \
     sqlite3 \
     libsqlite3-dev \
     && docker-php-ext-configure gd --with-freetype --with-jpeg \
-    && docker-php-ext-install gd pdo pdo_sqlite pdo_mysql
+    && docker-php-ext-configure intl \
+    && docker-php-ext-install gd intl pdo pdo_sqlite pdo_mysql zip bcmath
 
 # Enable Apache mod_rewrite
 RUN a2enmod rewrite
