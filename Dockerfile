@@ -33,11 +33,7 @@ COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 # Install Laravel dependencies
 RUN composer install --no-dev --optimize-autoloader
 
-# Install Node.js to build frontend assets (Vite/Tailwind)
-RUN curl -fsSL https://deb.nodesource.com/setup_20.x | bash - \
-    && apt-get install -y nodejs \
-    && npm install \
-    && npm run build
+
 
 # Set permissions for storage and cache folders
 RUN chown -R www-data:www-data /var/www/html/storage /var/www/html/bootstrap/cache
