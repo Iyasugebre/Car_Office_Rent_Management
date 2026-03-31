@@ -21,6 +21,14 @@ class AdminDashboardController extends Controller
 
         $recent_bookings = Booking::with(['car', 'office'])->latest()->take(5)->get();
 
-        return view('admin.dashboard', compact('stats', 'recent_bookings'));
+        // Vehicles due for service
+        $overdueVehicles = Car::where('status', '!=', 'decommissioned')
+            ->get()
+            ->filter(fn($c) => $c->service_health !== 'good')
+            ->sortBy(fn($c) => $c->service_health === 'overdue' ? 0 : 1)
+            ->take(5);
+
+        return view('admin.dashboard', compact('stats', 'recent_bookings', 'overdueVehicles'));
     }
 }
+

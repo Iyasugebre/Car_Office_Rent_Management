@@ -1,7 +1,5 @@
 <?php
 
-use App\Models\Car;
-use App\Models\Office;
 use Illuminate\Support\Facades\Route;
 
 // Auth Routes - Home is Login
@@ -9,12 +7,11 @@ Route::get('/', [\App\Http\Controllers\Auth\LoginController::class, 'show'])->na
 Route::post('/login', [\App\Http\Controllers\Auth\LoginController::class, 'authenticate']);
 Route::post('/logout', [\App\Http\Controllers\Auth\LoginController::class, 'logout'])->name('logout');
 
-// Admin Dashboard Routes - Unified ERP
-Route::middleware(['auth'])->prefix('admin')->name('admin.')->group(function () {
+// Custom Blade ERP Routes - moved to /erp prefix to avoid conflict with Filament's /admin panel
+Route::middleware(['auth'])->prefix('erp')->name('admin.')->group(function () {
     Route::get('/', [\App\Http\Controllers\AdminDashboardController::class, 'index'])->name('dashboard');
-    
+
     Route::resource('offices', \App\Http\Controllers\Admin\OfficeManagerController::class);
-    Route::resource('cars', \App\Http\Controllers\Admin\CarManagerController::class);
     Route::resource('bookings', \App\Http\Controllers\Admin\BookingManagerController::class);
     Route::resource('branch-requests', \App\Http\Controllers\Admin\BranchRequestController::class);
     Route::resource('agreements', \App\Http\Controllers\Admin\AgreementController::class);
@@ -32,8 +29,37 @@ Route::middleware(['auth'])->prefix('admin')->name('admin.')->group(function () 
     Route::post('renewals/{renewal}/approve', [\App\Http\Controllers\Admin\AgreementRenewalController::class, 'approve'])->name('renewals.approve');
     Route::post('renewals/{renewal}/reject', [\App\Http\Controllers\Admin\AgreementRenewalController::class, 'reject'])->name('renewals.reject');
 
-    Route::post('notifications/mark-read', function() {
-        auth()->user()->unreadNotifications->markAsRead();
-        return back();
-    })->name('notifications.markRead');
+    // Vehicle Service Tracker
+    Route::get('service-tracker', [\App\Http\Controllers\Admin\VehicleServiceTrackerController::class, 'index'])->name('service-tracker.index');
+    Route::get('service-tracker/schedules', [\App\Http\Controllers\Admin\VehicleServiceTrackerController::class, 'schedules'])->name('service-tracker.schedules');
+    Route::get('service-tracker/schedules/create', [\App\Http\Controllers\Admin\VehicleServiceTrackerController::class, 'createSchedule'])->name('service-tracker.schedules.create');
+    Route::post('service-tracker/schedules', [\App\Http\Controllers\Admin\VehicleServiceTrackerController::class, 'storeSchedule'])->name('service-tracker.schedules.store');
+    Route::post('service-tracker/schedules/{schedule}/toggle', [\App\Http\Controllers\Admin\VehicleServiceTrackerController::class, 'toggleSchedule'])->name('service-tracker.schedules.toggle');
+    Route::delete('service-tracker/schedules/{schedule}', [\App\Http\Controllers\Admin\VehicleServiceTrackerController::class, 'destroySchedule'])->name('service-tracker.schedules.destroy');
+    Route::get('service-tracker/{car}', [\App\Http\Controllers\Admin\VehicleServiceTrackerController::class, 'show'])->name('service-tracker.show');
+    Route::post('service-tracker/{car}/log-service', [\App\Http\Controllers\Admin\VehicleServiceTrackerController::class, 'logService'])->name('service-tracker.log-service');
+    Route::post('service-tracker/{car}/update-mileage', [\App\Http\Controllers\Admin\VehicleServiceTrackerController::class, 'updateMileage'])->name('service-tracker.update-mileage');
+
+    // Vehicle Legal Tracker (Bolo & Inspection)
+    Route::prefix('legal-tracker')->name('legal-tracker.')->group(function () {
+        Route::get('/', [\App\Http\Controllers\Admin\VehicleLegalTrackerController::class, 'index'])->name('index');
+        Route::get('/{car}/edit', [\App\Http\Controllers\Admin\VehicleLegalTrackerController::class, 'edit'])->name('edit');
+        Route::put('/{car}', [\App\Http\Controllers\Admin\VehicleLegalTrackerController::class, 'update'])->name('update');
+    });
+
+    // Alert Center (ERP Notification Engine)
+    Route::prefix('notifications')->name('notifications.')->group(function () {
+        Route::get('/', [\App\Http\Controllers\Admin\NotificationCenterController::class, 'index'])->name('index');
+        Route::post('/{id}/read', [\App\Http\Controllers\Admin\NotificationCenterController::class, 'markAsRead'])->name('markRead');
+        Route::post('/mark-all-read', [\App\Http\Controllers\Admin\NotificationCenterController::class, 'markAllRead'])->name('markAllRead');
+    });
+
+    // Branch Utilities
+    Route::prefix('branch-utilities')->name('branch-utilities.')->group(function () {
+        Route::get('/', [\App\Http\Controllers\Admin\BranchUtilityController::class, 'index'])->name('index');
+        Route::post('/', [\App\Http\Controllers\Admin\BranchUtilityController::class, 'store'])->name('store');
+        Route::put('/{utility}', [\App\Http\Controllers\Admin\BranchUtilityController::class, 'update'])->name('update');
+        Route::post('/{utility}/pay', [\App\Http\Controllers\Admin\BranchUtilityController::class, 'recordPayment'])->name('recordPayment');
+        Route::delete('/{utility}', [\App\Http\Controllers\Admin\BranchUtilityController::class, 'destroy'])->name('destroy');
+    });
 });

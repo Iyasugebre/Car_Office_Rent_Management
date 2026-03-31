@@ -1,0 +1,658 @@
+﻿php.exe : Installing 
+dependencies from lock 
+file (including 
+require-dev)
+At line:1 char:1
++ & "C:\Users\Eyasu\Desktop
+\tools\php\php.exe" 
+"C:\Users\Eyasu\Desktop\ 
+...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~
+    + CategoryInfo         
+     : NotSpecified: (Ins  
+  talling depe...ng requ   
+ ire-dev):String) [], R    
+emoteException
+    + FullyQualifiedErrorI 
+   d : NativeCommandError
+ 
+Verifying lock file 
+contents can be installed 
+on current platform.
+Package operations: 135 
+installs, 0 updates, 0 
+removals
+  - Downloading 
+phpunit/php-timer (8.0.0)
+  - Downloading 
+phpunit/php-text-template 
+(5.0.0)
+  - Downloading 
+phpunit/php-invoker (6.0.0)
+  - Downloading 
+phpunit/php-file-iterator 
+(6.0.1)
+  - Downloading 
+theseer/tokenizer (2.0.1)
+  - Downloading 
+sebastian/lines-of-code 
+(4.0.0)
+  - Downloading 
+sebastian/complexity 
+(5.0.0)
+  - Downloading 
+phpunit/php-code-coverage 
+(12.5.3)
+  - Downloading 
+phar-io/version (3.2.1)
+  - Downloading 
+phar-io/manifest (2.0.4)
+  - Downloading 
+myclabs/deep-copy (1.13.4)
+  - Downloading 
+phpunit/phpunit (12.5.14)
+  0/12 [>-------------]   
+0%
+  1/12 [=>------------]   
+8%
+  2/12 [==>-----------]  
+16%
+  4/12 [====>---------]  
+33%
+  5/12 [=====>--------]  
+41%
+  7/12 [========>-----]  
+58%
+ 10/12 [===========>--]  
+83%
+ 11/12 [============>-]  
+91%
+ 12/12 [==============] 
+100%
+  - Installing 
+symfony/polyfill-php80 
+(v1.33.0): Extracting 
+archive
+  - Installing 
+symfony/polyfill-mbstring 
+(v1.33.0): Extracting 
+archive
+  - Installing 
+symfony/polyfill-ctype 
+(v1.33.0): Extracting 
+archive
+  - Installing 
+phpoption/phpoption 
+(1.9.5): Extracting archive
+  - Installing graham-campb
+ell/result-type (v1.1.4): 
+Extracting archive
+  - Installing 
+symfony/css-selector 
+(v7.4.6): Extracting 
+archive
+  - Installing symfony/depr
+ecation-contracts 
+(v3.6.0): Extracting 
+archive
+  - Installing 
+symfony/var-dumper 
+(v7.4.6): Extracting 
+archive
+  - Installing 
+symfony/polyfill-uuid 
+(v1.33.0): Extracting 
+archive
+  - Installing symfony/uid 
+(v7.4.4): Extracting 
+archive
+  - Installing 
+symfony/routing (v7.4.6): 
+Extracting archive
+  - Installing 
+symfony/process (v7.4.5): 
+Extracting archive
+  - Installing 
+symfony/polyfill-php85 
+(v1.33.0): Extracting 
+archive
+  - Installing 
+symfony/polyfill-php84 
+(v1.33.0): Extracting 
+archive
+  - Installing symfony/poly
+fill-intl-normalizer 
+(v1.33.0): Extracting 
+archive
+  - Installing 
+symfony/polyfill-intl-idn 
+(v1.33.0): Extracting 
+archive
+  - Installing 
+symfony/mime (v7.4.7): 
+Extracting archive
+  - Installing 
+psr/container (2.0.2): 
+Extracting archive
+  - Installing 
+symfony/service-contracts 
+(v3.6.1): Extracting 
+archive
+  - Installing 
+psr/event-dispatcher 
+(1.0.0): Extracting archive
+  - Installing symfony/even
+t-dispatcher-contracts 
+(v3.6.0): Extracting 
+archive
+  - Installing 
+symfony/event-dispatcher 
+(v7.4.4): Extracting 
+archive
+  - Installing psr/log 
+(3.0.2): Extracting archive
+  - Installing 
+doctrine/lexer (3.0.1): 
+Extracting archive
+  - Installing 
+egulias/email-validator 
+(4.0.4): Extracting archive
+  - Installing 
+symfony/mailer (v7.4.6): 
+Extracting archive
+  - Installing 
+symfony/http-foundation 
+(v7.4.7): Extracting 
+archive
+  - Installing 
+symfony/error-handler 
+(v7.4.4): Extracting 
+archive
+  - Installing 
+symfony/http-kernel 
+(v7.4.7): Extracting 
+archive
+  - Installing 
+symfony/finder (v7.4.6): 
+Extracting archive
+  - Installing symfony/poly
+fill-intl-grapheme 
+(v1.33.0): Extracting 
+archive
+  - Installing 
+symfony/string (v7.4.6): 
+Extracting archive
+  - Installing 
+symfony/console (v7.4.7): 
+Extracting archive
+  - Installing 
+ramsey/collection (2.1.1): 
+Extracting archive
+  - Installing brick/math 
+(0.14.8): Extracting 
+archive
+  - Installing ramsey/uuid 
+(4.9.2): Extracting archive
+  - Installing 
+psr/simple-cache (3.0.0): 
+Extracting archive
+  - Installing 
+nunomaduro/termwind 
+(v2.4.0): Extracting 
+archive
+  - Installing symfony/tran
+slation-contracts 
+(v3.6.1): Extracting 
+archive
+  - Installing 
+symfony/translation 
+(v7.4.6): Extracting 
+archive
+  - Installing 
+symfony/polyfill-php83 
+(v1.33.0): Extracting 
+archive
+  - Installing psr/clock 
+(1.0.0): Extracting archive
+  - Installing 
+symfony/clock (v7.4.0): 
+Extracting archive
+  - Installing carbonphp/ca
+rbon-doctrine-types 
+(3.2.0): Extracting archive
+  - Installing 
+nesbot/carbon (3.11.3): 
+Extracting archive
+  - Installing 
+monolog/monolog (3.10.0): 
+Extracting archive
+  - Installing 
+psr/http-message (2.0): 
+Extracting archive
+  - Installing 
+psr/http-factory (1.1.0): 
+Extracting archive
+  - Installing 
+league/uri-interfaces 
+(7.8.1): Extracting archive
+  - Installing league/uri 
+(7.8.1): Extracting archive
+  - Installing 
+league/mime-type-detection 
+(1.16.0): Extracting 
+archive
+  - Installing 
+league/flysystem-local 
+(3.31.0): Extracting 
+archive
+  - Installing 
+league/flysystem (3.33.0): 
+Extracting archive
+  - Installing nette/utils 
+(v4.1.3): Extracting 
+archive
+  - Installing 
+nette/schema (v1.3.5): 
+Extracting archive
+  - Installing 
+dflydev/dot-access-data 
+(v3.0.3): Extracting 
+archive
+  - Installing 
+league/config (v1.2.0): 
+Extracting archive
+  - Installing 
+league/commonmark (2.8.2): 
+Extracting archive
+  - Installing laravel/seri
+alizable-closure 
+(v2.0.10): Extracting 
+archive
+  - Installing 
+laravel/prompts (v0.3.16): 
+Extracting archive
+  - Installing 
+guzzlehttp/uri-template 
+(v1.0.5): Extracting 
+archive
+  - Installing 
+guzzlehttp/promises 
+(2.3.0): Extracting archive
+  - Installing 
+psr/http-client (1.0.3): 
+Extracting archive
+  - Installing 
+ralouphie/getallheaders 
+(3.0.3): Extracting archive
+  - Installing 
+guzzlehttp/psr7 (2.9.0): 
+Extracting archive
+  - Installing 
+guzzlehttp/guzzle 
+(7.10.0): Extracting 
+archive
+  - Installing 
+fruitcake/php-cors 
+(v1.4.0): Extracting 
+archive
+  - Installing dragonmantan
+k/cron-expression 
+(v3.6.0): Extracting 
+archive
+  - Installing 
+doctrine/inflector 
+(2.1.0): Extracting archive
+  - Installing 
+laravel/framework 
+(v13.2.0): Extracting 
+archive
+  - Installing 
+blade-ui-kit/blade-icons 
+(1.9.0): Extracting archive
+  - Installing blade-ui-kit
+/blade-heroicons (2.7.0): 
+Extracting archive
+  - Installing chillerlan/p
+hp-settings-container 
+(3.3.0): Extracting archive
+  - Installing danharrin/da
+te-format-converter 
+(v0.3.1): Extracting 
+archive
+  - Installing danharrin/li
+vewire-rate-limiting 
+(v2.2.0): Extracting 
+archive
+  - Installing 
+fakerphp/faker (v1.24.1): 
+Extracting archive
+  - Installing paragonie/co
+nstant_time_encoding 
+(v3.1.3): Extracting 
+archive
+  - Installing 
+pragmarx/google2fa 
+(v9.0.0): Extracting 
+archive
+  - Installing 
+pragmarx/google2fa-qrcode 
+(v3.0.0): Extracting 
+archive
+  - Installing 
+masterminds/html5 
+(2.10.0): Extracting 
+archive
+  - Installing 
+symfony/html-sanitizer 
+(v7.4.7): Extracting 
+archive
+  - Installing spatie/larav
+el-package-tools (1.93.0): 
+Extracting archive
+  - Installing 
+spatie/invade (2.1.0): 
+Extracting archive
+  - Installing 
+nette/php-generator 
+(v4.2.2): Extracting 
+archive
+  - Installing 
+livewire/livewire 
+(v4.2.2): Extracting 
+archive
+  - Installing 
+league/uri-components 
+(7.8.1): Extracting archive
+  - Installing kirschbaum-d
+evelopment/eloquent-power-j
+oins (4.3.1): Extracting 
+archive
+  - Installing 
+filament/support (v5.4.3): 
+Extracting archive
+  - Installing 
+openspout/openspout 
+(v4.32.0): Extracting 
+archive
+  - Installing league/csv 
+(9.28.0): Extracting 
+archive
+  - Installing 
+filament/actions (v5.4.3): 
+Extracting archive
+  - Installing 
+filament/notifications 
+(v5.4.3): Extracting 
+archive
+  - Installing 
+filament/schemas (v5.4.3): 
+Extracting archive
+  - Installing 
+filament/infolists 
+(v5.4.3): Extracting 
+archive
+  - Installing 
+spatie/shiki-php (2.3.3): 
+Extracting archive
+  - Installing 
+scrivo/highlight.php 
+(v9.18.1.10): Extracting 
+archive
+  - Installing 
+filament/forms (v5.4.3): 
+Extracting archive
+  - Installing 
+filament/widgets (v5.4.3): 
+Extracting archive
+  - Installing 
+filament/query-builder 
+(v5.4.3): Extracting 
+archive
+  - Installing 
+filament/tables (v5.4.3): 
+Extracting archive
+  - Installing 
+chillerlan/php-qrcode 
+(5.0.5): Extracting archive
+  - Installing 
+filament/filament 
+(v5.4.3): Extracting 
+archive
+  - Installing 
+laravel/pail (v1.2.6): 
+Extracting archive
+  - Installing 
+laravel/pint (v1.29.0): 
+Extracting archive
+  - Installing 
+nikic/php-parser (v5.7.0): 
+Extracting archive
+  - Installing psy/psysh 
+(v0.12.22): Extracting 
+archive
+  - Installing 
+laravel/tinker (v3.0.0): 
+Extracting archive
+  - Installing 
+hamcrest/hamcrest-php 
+(v2.1.1): Extracting 
+archive
+  - Installing 
+mockery/mockery (1.6.12): 
+Extracting archive
+  - Installing filp/whoops 
+(2.18.4): Extracting 
+archive
+  - Installing 
+nunomaduro/collision 
+(v8.9.1): Extracting 
+archive
+  - Installing staabm/side-
+effects-detector (1.0.5): 
+Extracting archive
+  - Installing 
+sebastian/version (6.0.0): 
+Extracting archive
+  - Installing 
+sebastian/type (6.0.3): 
+Extracting archive
+  - Installing sebastian/re
+cursion-context (7.0.1): 
+Extracting archive
+  - Installing 
+sebastian/object-reflector 
+(5.0.0): Extracting archive
+  - Installing sebastian/ob
+ject-enumerator (7.0.0): 
+Extracting archive
+  - Installing 
+sebastian/global-state 
+(8.0.2): Extracting archive
+  - Installing 
+sebastian/exporter 
+(7.0.2): Extracting archive
+  - Installing 
+sebastian/environment 
+(8.0.4): Extracting archive
+  - Installing 
+sebastian/diff (7.0.0): 
+Extracting archive
+  - Installing 
+sebastian/comparator 
+(7.1.4): Extracting archive
+  - Installing 
+sebastian/cli-parser 
+(4.2.0): Extracting archive
+  - Installing 
+phpunit/php-timer (8.0.0): 
+Extracting archive
+  - Installing 
+phpunit/php-text-template 
+(5.0.0): Extracting archive
+  - Installing 
+phpunit/php-invoker 
+(6.0.0): Extracting archive
+  - Installing 
+phpunit/php-file-iterator 
+(6.0.1): Extracting archive
+  - Installing 
+theseer/tokenizer (2.0.1): 
+Extracting archive
+  - Installing 
+sebastian/lines-of-code 
+(4.0.0): Extracting archive
+  - Installing 
+sebastian/complexity 
+(5.0.0): Extracting archive
+  - Installing 
+phpunit/php-code-coverage 
+(12.5.3): Extracting 
+archive
+  - Installing 
+phar-io/version (3.2.1): 
+Extracting archive
+  - Installing 
+phar-io/manifest (2.0.4): 
+Extracting archive
+  - Installing 
+myclabs/deep-copy 
+(1.13.4): Extracting 
+archive
+  - Installing 
+phpunit/phpunit (12.5.14): 
+Extracting archive
+    Skipped installation 
+of bin Resources/bin/var-du
+mp-server for package 
+symfony/var-dumper: name 
+conflicts with an existing 
+file
+   0/125 [>-----------]   
+0%    Skipped installation 
+of bin Resources/bin/patch-
+type-declarations for 
+package 
+symfony/error-handler: 
+name conflicts with an 
+existing file
+
+  20/125 [=>----------]  
+16%
+  30/125 [==>---------]  
+24%    Skipped 
+installation of bin 
+bin/carbon for package 
+nesbot/carbon: name 
+conflicts with an existing 
+file
+
+  40/125 [===>--------]  
+32%
+  50/125 [====>-------]  
+40%
+  70/125 [======>-----]  
+56%
+  80/125 [=======>----]  
+64%
+  90/125 [========>---]  
+72%    Skipped 
+installation of bin 
+bin/psysh for package 
+psy/psysh: name conflicts 
+with an existing file
+
+ 100/125 [=========>--]  
+80%
+ 120/125 [===========>]  
+96%
+ 125/125 [============] 
+100%
+Generating optimized 
+autoload files
+> Illuminate\Foundation\Com
+poserScripts::postAutoloadD
+ump
+> "C:\Users\Eyasu\Desktop\t
+ools\php\php.exe" artisan 
+package:discover --ansi
+
+  [37;44m INFO [39;49m Discovering packages.  
+
+
+  [41;1m ErrorException [49;22m
+
+[39;1m  rename(C:\Users\Eyasu\Desktop\Car_Office_Rent_Management\bootstrap\cache\pac4AFB.tmp,C:\Users\Eyasu\Desktop\Car_Office_Rent_Management\bootstrap\cache\packages.php): Access is denied (code: 5)[39;22m
+
+  at [32mvendor\laravel\framework\src\Illuminate\Filesystem\Filesystem.php[39m:[32m233[39m
+    229Γûò         }
+    230Γûò 
+    231Γûò         file_put_contents($tempPath, $content);
+    232Γûò 
+  Γ₧£ 233Γûò         rename($tempPath, $path);
+    234Γûò     }
+    235Γûò 
+    236Γûò     /**
+    237Γûò      * Replace a given string within a given file.
+
+  [33m1   [39m[39;1mvendor\laravel\framework\src\Illuminate\Filesystem\Filesystem.php[39;22m:[39;1m233[39;22m
+
+  [33m2   [39m[39;1mvendor\laravel\framework\src\Illuminate\Foundation\PackageManifest.php[39;22m:[39;1m182[39;22m
+  [90m    Illuminate\Filesystem\Filesystem::replace("C:\Users\Eyasu\Desktop\Car_Office_Rent_Management\bootstrap\cache\packages.php", "<?php return array (
+  'blade-ui-kit/blade-heroicons' => 
+  array (
+    'providers' => 
+    array (
+      0 => 'BladeUI\\Heroicons\\BladeHeroiconsServiceProvider',
+    ),
+  ),
+  'blade-ui-kit/blade-icons' => 
+  array (
+    'providers' => 
+    array (
+      0 => 'BladeUI\\Icons\\BladeIconsServiceProvider',
+    ),
+  ),
+  'filament/actions' => 
+  array (
+    'providers' => 
+    array (
+      0 => 'Filament\\Actions\\ActionsServiceProvider',
+    ),
+  ),
+  'filament/filament' => 
+  array (
+    'providers' => 
+    array (
+      0 => 'Filament\\FilamentServiceProvider',
+    ),
+  ),
+  'filament/forms' => 
+  array (
+    'providers' => 
+    array (
+      0 => 'Filament\\Forms\\FormsServiceProvider',
+    ),
+  ),
+  'filament/infolists' => 
+  array (
+    'providers' => 
+    array (
+      0 => 'Filament\\Infolists\\InfolistsServiceProvider',
+    ),
+  ),
+  'filament/notifications' => 
+  array (
+    'providers' => 
+    array (
+      0 => 'Filament\\Notifications\\NotificationsServiceProvider',
+    ),
+...")[39m
+
+Script "C:\Users\Eyasu\Desk
+top\tools\php\php.exe" 
+artisan package:discover 
+--ansi handling the 
+post-autoload-dump event 
+returned with error code 1

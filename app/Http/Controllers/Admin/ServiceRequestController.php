@@ -43,7 +43,9 @@ class ServiceRequestController extends Controller
         $validated['requester_id'] = auth()->id();
         $validated['status'] = 'pending';
 
-        ServiceRequest::create($validated);
+        $service = ServiceRequest::create($validated);
+        $admins = \App\Models\User::where('role', 'admin')->get();
+        \Illuminate\Support\Facades\Notification::send($admins, new \App\Notifications\MaintenanceRequestNotification($service, 'pending', 'New maintenance request submitted and requires approval.'));
 
         return redirect()->route('admin.services.index')->with('success', 'Service request submitted successfully.');
     }
@@ -73,6 +75,7 @@ class ServiceRequestController extends Controller
 
         // Option: Change car status to maintenance
         $service->car->update(['status' => 'maintenance']);
+        $service->requester->notify(new \App\Notifications\MaintenanceRequestNotification($service, 'approved', "Service request for {$service->car->plate_number} has been approved."));
 
         return redirect()->route('admin.services.show', $service)->with('success', 'Service localized to provider and approved.');
     }
@@ -104,6 +107,7 @@ class ServiceRequestController extends Controller
             $carUpdates['last_service_mileage'] = $service->car->mileage;
         }
         $service->car->update($carUpdates);
+        $service->requester->notify(new \App\Notifications\MaintenanceRequestNotification($service, 'completed', "Maintenance for {$service->car->plate_number} successfully completed."));
 
         return redirect()->route('admin.services.show', $service)->with('success', 'Service completed. Vehicle maintenance history updated.');
     }
@@ -112,6 +116,7 @@ class ServiceRequestController extends Controller
     public function destroy(ServiceRequest $service)
     {
         $service->update(['status' => 'rejected', 'fleet_manager_id' => auth()->id()]);
+        $service->requester->notify(new \App\Notifications\MaintenanceRequestNotification($service, 'rejected', "Service request for car {$service->car->plate_number} has been rejected."));
         return redirect()->route('admin.services.index')->with('success', 'Service request rejected/cancelled.');
     }
 }

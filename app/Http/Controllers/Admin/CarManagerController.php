@@ -33,7 +33,19 @@ class CarManagerController extends Controller
             'status' => 'required|string',
             'mileage' => 'nullable|integer|min:0',
             'last_service_date' => 'nullable|date',
+            'registration_number' => 'nullable|string',
+            'bolo_expiry_date' => 'nullable|date',
+            'inspection_expiry_date' => 'nullable|date',
+            'bolo_certificate' => 'nullable|file|mimes:pdf,jpg,jpeg,png|max:5120',
+            'inspection_certificate' => 'nullable|file|mimes:pdf,jpg,jpeg,png|max:5120',
         ]);
+
+        if ($request->hasFile('bolo_certificate')) {
+            $validated['bolo_certificate_path'] = $request->file('bolo_certificate')->store('certificates/bolo', 'public');
+        }
+        if ($request->hasFile('inspection_certificate')) {
+            $validated['inspection_certificate_path'] = $request->file('inspection_certificate')->store('certificates/inspection', 'public');
+        }
 
         $validated['last_service_mileage'] = $validated['mileage'] ?? 0;
 
@@ -59,7 +71,19 @@ class CarManagerController extends Controller
             'status' => 'required|string',
             'mileage' => 'nullable|integer|min:0',
             'last_service_date' => 'nullable|date',
+            'registration_number' => 'nullable|string',
+            'bolo_expiry_date' => 'nullable|date',
+            'inspection_expiry_date' => 'nullable|date',
+            'bolo_certificate' => 'nullable|file|mimes:pdf,jpg,jpeg,png|max:2048',
+            'inspection_certificate' => 'nullable|file|mimes:pdf,jpg,jpeg,png|max:2048',
         ]);
+
+        if ($request->hasFile('bolo_certificate')) {
+            $validated['bolo_certificate_path'] = $request->file('bolo_certificate')->store('certificates/bolo', 'public');
+        }
+        if ($request->hasFile('inspection_certificate')) {
+            $validated['inspection_certificate_path'] = $request->file('inspection_certificate')->store('certificates/inspection', 'public');
+        }
 
         $car->update($validated);
         return redirect()->route('admin.cars.index')->with('success', 'Car updated successfully.');

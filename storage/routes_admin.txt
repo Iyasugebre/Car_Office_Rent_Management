@@ -1,0 +1,77 @@
+﻿
+  GET|HEAD        admin aΓÇª
+  GET|HEAD        admin/agreements admin.agreements.index ΓÇ║ Admin\AgreementControΓÇª
+  POST            admin/agreements admin.agreements.store ΓÇ║ Admin\AgreementControΓÇª
+  GET|HEAD        admin/agreements/create admin.agreements.create ΓÇ║ Admin\AgreementΓÇª
+  GET|HEAD        admin/agreements/{agreement} admin.agreements.show ΓÇ║ Admin\AgΓÇª
+  PUT|PATCH       admin/agreements/{agreement} admin.agreements.update ΓÇ║ Admin\AgreΓÇª
+  DELETE          admin/agreements/{agreement} admin.agreements.destroy ΓÇ║ Admin\AgreeΓÇª
+  POST            admin/agreements/{agreement}/authenticate admin.agreements.authenticate ΓÇ║ AdmΓÇª
+  GET|HEAD        admin/agreements/{agreement}/edit admin.agreements.edit ΓÇ║ AdmΓÇª
+  POST            admin/agreements/{agreement}/renewals admin.renewals.store ΓÇ║ Admin\AΓÇª
+  GET|HEAD        admin/agreements/{agreement}/renewals/create admin.renewals.create ΓÇ║ AΓÇª
+  GET|HEAD        admin/agreements/{record}/edit filament.admin.resources.agreements.edit ΓÇ║ App\Filament\Resources\AgreementResoΓÇª
+  GET|HEAD        admin/bookings admin.bookings.index ΓÇ║ Admin\BookingManagerControllΓÇª
+  POST            admin/bookings admin.bookings.store ΓÇ║ Admin\BookingManagerControllΓÇª
+  GET|HEAD        admin/bookings/create admin.bookings.create ΓÇ║ Admin\BookingManagerCoΓÇª
+  GET|HEAD        admin/bookings/{booking} admin.bookings.show ΓÇ║ Admin\BookingManaΓÇª
+  PUT|PATCH       admin/bookings/{booking} admin.bookings.update ΓÇ║ Admin\BookingManageΓÇª
+  DELETE          admin/bookings/{booking} admin.bookings.destroy ΓÇ║ Admin\BookingManagerΓÇª
+  GET|HEAD        admin/bookings/{booking}/edit admin.bookings.edit ΓÇ║ Admin\BookinΓÇª
+  GET|HEAD        admin/branch-requests admin.branch-requests.index ΓÇ║ Admin\BranchRequestCΓÇª
+  POST            admin/branch-requests admin.branch-requests.store ΓÇ║ Admin\BranchRequestCΓÇª
+  GET|HEAD        admin/branch-requests/create admin.branch-requests.create ΓÇ║ Admin\BranchReΓÇª
+  GET|HEAD        admin/branch-requests/{branch_request} admin.branch-requests.show ΓÇ║ AdΓÇª
+  PUT|PATCH       admin/branch-requests/{branch_request} admin.branch-requests.update ΓÇ║ AdmiΓÇª
+  DELETE          admin/branch-requests/{branch_request} admin.branch-requests.destroy ΓÇ║ AdminΓÇª
+  GET|HEAD        admin/branch-requests/{branch_request}/edit admin.branch-requests.editΓÇª
+  GET|HEAD        admin/branch-utilities admin.branch-utilities.index ΓÇ║ Admin\BranchUtilityΓÇª
+  POST            admin/branch-utilities admin.branch-utilities.store ΓÇ║ Admin\BranchUtilityΓÇª
+  GET|HEAD        admin/branch-utilities/create filament.admin.resources.branch-utilities.create ΓÇ║ App\Filament\Resources\BranchUtilityResource\PaΓÇª
+  GET|HEAD        admin/branch-utilities/{record}/edit filament.admin.resources.branch-utilities.edit ΓÇ║ App\Filament\Resources\BranchUtilityReΓÇª
+  PUT             admin/branch-utilities/{utility} admin.branch-utilities.update ΓÇ║ Admin\BranΓÇª
+  DELETE          admin/branch-utilities/{utility} admin.branch-utilities.destroy ΓÇ║ Admin\BrancΓÇª
+  POST            admin/branch-utilities/{utility}/pay admin.branch-utilities.recordPayment ΓÇ║ Admin\BranchUΓÇª
+  GET|HEAD        admin/cars filament.admin.resources.cars.index ΓÇ║ App\Filament\Resources\CarResource\Pages\ListΓÇª
+  GET|HEAD        admin/cars/create filament.admin.resources.cars.create ΓÇ║ App\Filament\Resources\CarResource\PageΓÇª
+  GET|HEAD        admin/cars/{record}/edit filament.admin.resources.cars.edit ΓÇ║ App\Filament\Resources\CarResoΓÇª
+  GET|HEAD        admin/legal-tracker admin.legal-tracker.index ΓÇ║ Admin\VehicleLegalTrackerConΓÇª
+  PUT             admin/legal-tracker/{car} admin.legal-tracker.update ΓÇ║ Admin\VehicleLegalTrackΓÇª
+  GET|HEAD        admin/legal-tracker/{car}/edit admin.legal-tracker.edit ΓÇ║ Admin\VehicleLegΓÇª
+  GET|HEAD        admin/login filament.admin.auth.login ΓÇ║ Filament\Auth ΓÇ║ ΓÇª
+  POST            admin/logout filament.admin.auth.logout ΓÇ║ Filament\Auth ΓÇ║ LogoutContΓÇª
+  GET|HEAD        admin/notifications admin.notifications.index ΓÇ║ Admin\NotificationCenterConΓÇª
+  POST            admin/notifications/mark-all-read admin.notifications.markAllRead ΓÇ║ Admin\NotificationCΓÇª
+  POST            admin/notifications/{id}/read admin.notifications.markRead ΓÇ║ Admin\NotificationCentΓÇª
+  GET|HEAD        admin/offices admin.offices.index ΓÇ║ Admin\OfficeManagerControlleΓÇª
+  POST            admin/offices admin.offices.store ΓÇ║ Admin\OfficeManagerControlleΓÇª
+  GET|HEAD        admin/offices/create admin.offices.create ΓÇ║ Admin\OfficeManagerConΓÇª
+  GET|HEAD        admin/offices/{office} admin.offices.show ΓÇ║ Admin\OfficeManageΓÇª
+  PUT|PATCH       admin/offices/{office} admin.offices.update ΓÇ║ Admin\OfficeManagerCΓÇª
+  DELETE          admin/offices/{office} admin.offices.destroy ΓÇ║ Admin\OfficeManagerCoΓÇª
+  GET|HEAD        admin/offices/{office}/edit admin.offices.edit ΓÇ║ Admin\OfficeMΓÇª
+  GET|HEAD        admin/offices/{record}/edit filament.admin.resources.offices.edit ΓÇ║ App\Filament\Resources\OfficeResoΓÇª
+  GET|HEAD        admin/renewals admin.renewals.index ΓÇ║ Admin\AgreementRenewalControllΓÇª
+  POST            admin/renewals/{renewal}/approve admin.renewals.approve ΓÇ║ Admin\AgreemenΓÇª
+  POST            admin/renewals/{renewal}/reject admin.renewals.reject ΓÇ║ Admin\AgreemenΓÇª
+  GET|HEAD        admin/service-tracker admin.service-tracker.index ΓÇ║ Admin\VehicleServiceTrackerCΓÇª
+  GET|HEAD        admin/service-tracker/schedules admin.service-tracker.schedules ΓÇ║ Admin\VehicleServiceTrΓÇª
+  POST            admin/service-tracker/schedules admin.service-tracker.schedules.store ΓÇ║ Admin\VehicleServiceTrackeΓÇª
+  GET|HEAD        admin/service-tracker/schedules/create admin.service-tracker.schedules.create ΓÇ║ Admin\VehicleServiceΓÇª
+  DELETE          admin/service-tracker/schedules/{schedule} admin.service-tracker.schedules.destroy ΓÇ║ Admin\VehicleServΓÇª
+  POST            admin/service-tracker/schedules/{schedule}/toggle admin.service-tracker.schedules.toggle ΓÇ║ Admin\VehΓÇª
+  GET|HEAD        admin/service-tracker/{car} admin.service-tracker.show ΓÇ║ Admin\VehicleServiceTΓÇª
+  POST            admin/service-tracker/{car}/log-service admin.service-tracker.log-service ΓÇ║ Admin\VehicleSeΓÇª
+  POST            admin/service-tracker/{car}/update-mileage admin.service-tracker.update-mileage ΓÇ║ Admin\VehicleSeΓÇª
+  GET|HEAD        admin/services admin.services.index ΓÇ║ Admin\ServiceRequestControllΓÇª
+  POST            admin/services admin.services.store ΓÇ║ Admin\ServiceRequestControllΓÇª
+  GET|HEAD        admin/services/create admin.services.create ΓÇ║ Admin\ServiceRequestCoΓÇª
+  GET|HEAD        admin/services/{service} admin.services.show ΓÇ║ Admin\ServiceRequΓÇª
+  PUT|PATCH       admin/services/{service} admin.services.update ΓÇ║ Admin\ServiceRequesΓÇª
+  DELETE          admin/services/{service} admin.services.destroy ΓÇ║ Admin\ServiceRequestΓÇª
+  POST            admin/services/{service}/assign admin.services.assign ΓÇ║ Admin\ServicΓÇª
+  POST            admin/services/{service}/complete admin.services.complete ΓÇ║ Admin\ServicΓÇª
+  GET|HEAD        admin/services/{service}/edit admin.services.edit ΓÇ║ Admin\ServicΓÇª
+
+       Showing [73] routes
+

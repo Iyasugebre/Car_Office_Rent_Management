@@ -1,15 +1,53 @@
 @import "tailwindcss";
 
 @theme {
-    --color-primary: #0f172a;
-    --color-secondary: #1e293b;
-    --color-accent: #3b82f6;
-    --color-gold: #fbbf24;
+  --color-primary: #6366f1;
+  --color-secondary: #a855f7;
+  --color-accent: #ec4899;
+  --color-success: #10b981;
+  --color-warning: #f59e0b;
+  --color-danger: #ef4444;
+  --color-surface: #0f172a;
+  --color-surface-soft: #1e293b;
+  
+  --font-outfit: "Outfit", sans-serif;
+  --font-inter: "Inter", sans-serif;
+
+  /* Custom Animations */
+  @keyframes blob {
+    0% { transform: translate(0px, 0px) scale(1); }
+    33% { transform: translate(30px, -50px) scale(1.1); }
+    66% { transform: translate(-20px, 20px) scale(0.9); }
+    100% { transform: translate(0px, 0px) scale(1); }
+  }
 }
 
 @layer base {
   body {
-    @apply antialiased text-gray-900 bg-gray-50;
-    font-family: 'Inter', sans-serif;
+    @apply antialiased font-inter text-slate-200 bg-[#0f172a];
   }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-outfit;
+  }
+}
+
+@utility glass-card {
+  @apply bg-white/5 backdrop-blur-2xl border border-white/10 rounded-[2.5rem] shadow-2xl;
+}
+
+@utility btn-premium {
+  @apply relative overflow-hidden px-8 py-4 rounded-2xl bg-gradient-to-r from-primary to-secondary text-white font-bold transition-all duration-300 hover:shadow-xl hover:shadow-primary/40 active:scale-95;
+}
+
+@utility animate-blob {
+  animation: blob 7s infinite;
+}
+
+@utility animation-delay-2000 {
+  animation-delay: 2s;
+}
+
+@utility animation-delay-4000 {
+  animation-delay: 4s;
 }

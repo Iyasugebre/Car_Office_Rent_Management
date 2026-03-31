@@ -10,7 +10,7 @@
                 <a href="{{ route('admin.cars.index') }}" style="color: var(--text-muted); text-decoration: none; font-size: 0.875rem;">Cancel</a>
             </div>
 
-            <form action="{{ route('admin.cars.store') }}" method="POST">
+            <form action="{{ route('admin.cars.store') }}" method="POST" enctype="multipart/form-data">
                 @csrf
                 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
                     <div>
@@ -28,6 +28,10 @@
                     <div>
                         <label style="display: block; font-size: 0.875rem; font-weight: 500; margin-bottom: 0.5rem;">Plate Number</label>
                         <input type="text" name="plate_number" placeholder="ABC-1234" style="width: 100%; padding: 0.75rem; border-radius: 0.5rem; border: 1px solid var(--border-color);" required>
+                    </div>
+                     <div>
+                        <label style="display: block; font-size: 0.875rem; font-weight: 500; margin-bottom: 0.5rem;">Registration Number</label>
+                        <input type="text" name="registration_number" placeholder="Reg #" style="width: 100%; padding: 0.75rem; border-radius: 0.5rem; border: 1px solid var(--border-color);">
                     </div>
                     <div>
                         <label style="display: block; font-size: 0.875rem; font-weight: 500; margin-bottom: 0.5rem;">Office/Location</label>
@@ -53,9 +57,24 @@
                         <label style="display: block; font-size: 0.875rem; font-weight: 500; margin-bottom: 0.5rem;">Current Mileage (km)</label>
                         <input type="number" name="mileage" value="0" min="0" style="width: 100%; padding: 0.75rem; border-radius: 0.5rem; border: 1px solid var(--border-color);">
                     </div>
+                    <div style="grid-column: span 2; border-top: 1px solid #eee; padding-top: 1.5rem; margin-top: 0.5rem;">
+                         <h4 style="margin: 0 0 1rem 0;">Legal Tracking (Bolo & Inspection)</h4>
+                    </div>
                     <div>
-                        <label style="display: block; font-size: 0.875rem; font-weight: 500; margin-bottom: 0.5rem;">Last Service Date</label>
-                        <input type="date" name="last_service_date" style="width: 100%; padding: 0.75rem; border-radius: 0.5rem; border: 1px solid var(--border-color);">
+                        <label style="display: block; font-size: 0.875rem; font-weight: 500; margin-bottom: 0.5rem;">Bolo Expiry Date</label>
+                        <input type="date" name="bolo_expiry_date" style="width: 100%; padding: 0.75rem; border-radius: 0.5rem; border: 1px solid var(--border-color);">
+                    </div>
+                    <div>
+                        <label style="display: block; font-size: 0.875rem; font-weight: 500; margin-bottom: 0.5rem;">Bolo Certificate</label>
+                        <input type="file" name="bolo_certificate" style="width: 100%; padding: 0.75rem; border: 1px solid var(--border-color); border-radius: 0.5rem;">
+                    </div>
+                    <div>
+                        <label style="display: block; font-size: 0.875rem; font-weight: 500; margin-bottom: 0.5rem;">Inspection Expiry Date</label>
+                        <input type="date" name="inspection_expiry_date" style="width: 100%; padding: 0.75rem; border-radius: 0.5rem; border: 1px solid var(--border-color);">
+                    </div>
+                    <div>
+                        <label style="display: block; font-size: 0.875rem; font-weight: 500; margin-bottom: 0.5rem;">Inspection Certificate</label>
+                        <input type="file" name="inspection_certificate" style="width: 100%; padding: 0.75rem; border: 1px solid var(--border-color); border-radius: 0.5rem;">
                     </div>
                 </div>
 

@@ -23,8 +23,6 @@
                     <tr>
                         <th>Car Model</th>
                         <th>Plate Number</th>
-                        <th>Location</th>
-                        <th>Price/Day</th>
                         <th>Mileage</th>
                         <th>Status</th>
                         <th>Actions</th>
@@ -35,7 +33,9 @@
                         <tr>
                             <td>
                                 <div style="font-weight: 600;">{{ $car->make }} {{ $car->model }}</div>
-                                <div style="font-size: 0.75rem; color: var(--text-muted);">Year: {{ $car->year }}</div>
+                                <div style="font-size: 0.75rem; color: var(--text-muted); display: flex; align-items: center; gap: 0.25rem;">
+                                    <span>Year: {{ $car->year }}</span>
+                                </div>
                             </td>
                             <td style="font-family: monospace;">{{ $car->plate_number }}</td>
                             <td>
@@ -50,6 +50,11 @@
                                 @if($car->last_service_date)
                                 <div style="font-size: 0.70rem; color: var(--text-muted);">Last Svc: {{ \Carbon\Carbon::parse($car->last_service_date)->format('M d, Y') }}</div>
                                 @endif
+                                <div style="font-size: 0.70rem;">
+                                     <span class="status-badge" style="background: {{ $car->service_health === 'overdue' ? '#fee2e2' : ($car->service_health === 'warning' ? '#fef3c7' : '#ecfdf5') }}; color: {{ $car->service_health === 'overdue' ? '#991b1b' : ($car->service_health === 'warning' ? '#92400e' : '#065f46') }}; padding: 1px 4px; border-radius: 4px; font-size: 0.65rem;">
+                                        Health: {{ ucfirst($car->service_health) }}
+                                     </span>
+                                </div>
                             </td>
                             <td>
                                 <span class="status-badge status-{{ strtolower($car->status) }}">
@@ -58,6 +63,9 @@
                             </td>
                             <td>
                                 <div style="display: flex; gap: 0.5rem;">
+                                    <a href="{{ route('admin.service-tracker.show', $car) }}" title="Service Tracker" style="color: var(--primary-color); padding: 0.25rem;">
+                                        <i data-feather="activity" style="width: 18px; height: 18px;"></i>
+                                    </a>
                                     <a href="{{ route('admin.cars.edit', $car) }}" style="color: var(--secondary-color); padding: 0.25rem;">
                                         <i data-feather="edit-2" style="width: 18px; height: 18px;"></i>
                                     </a>

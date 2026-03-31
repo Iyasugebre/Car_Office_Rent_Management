@@ -1,0 +1,7 @@
+﻿
+  GET|HEAD       admin/cars filament.admin.resources.cars.index ΓÇ║ App\Filament\Resources\CarResource\Pages\ListCΓÇª
+  GET|HEAD       admin/cars/create filament.admin.resources.cars.create ΓÇ║ App\Filament\Resources\CarResource\PagesΓÇª
+  GET|HEAD       admin/cars/{record}/edit filament.admin.resources.cars.edit ΓÇ║ App\Filament\Resources\CarResouΓÇª
+
+        Showing [3] routes
+

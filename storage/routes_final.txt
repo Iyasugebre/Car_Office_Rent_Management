@@ -1,0 +1,19 @@
+﻿
+  GET|HEAD   admin filameΓÇª
+  GET|HEAD   admin/agreements filament.admin.resources.agreements.index ΓÇ║ App\Filament\Resources\AgreementResource\Pages\ListAgreeΓÇª
+  GET|HEAD   admin/agreements/create filament.admin.resources.agreements.create ΓÇ║ App\Filament\Resources\AgreementResource\Pages\CreΓÇª
+  GET|HEAD   admin/agreements/{record}/edit filament.admin.resources.agreements.edit ΓÇ║ App\Filament\Resources\AgreementResource\ΓÇª
+  GET|HEAD   admin/branch-utilities filament.admin.resources.branch-utilities.index ΓÇ║ App\Filament\Resources\BranchUtilityResource\Pages\ListBranΓÇª
+  GET|HEAD   admin/branch-utilities/create filament.admin.resources.branch-utilities.create ΓÇ║ App\Filament\Resources\BranchUtilityResource\Pages\CΓÇª
+  GET|HEAD   admin/branch-utilities/{record}/edit filament.admin.resources.branch-utilities.edit ΓÇ║ App\Filament\Resources\BranchUtilityResourcΓÇª
+  GET|HEAD   admin/cars fΓÇª
+  GET|HEAD   admin/cars/create filament.admin.resources.cars.create ΓÇ║ App\Filament\Resources\CarResource\Pages\CreΓÇª
+  GET|HEAD   admin/cars/{record}/edit filament.admin.resources.cars.edit ΓÇ║ App\Filament\Resources\CarResource\ΓÇª
+  GET|HEAD   admin/login ΓÇª
+  POST       admin/logout filament.admin.auth.logout ΓÇ║ Filament\Auth ΓÇ║ LogoutControlleΓÇª
+  GET|HEAD   admin/offices filament.admin.resources.offices.index ΓÇ║ App\Filament\Resources\OfficeResource\Pages\ListOfficΓÇª
+  GET|HEAD   admin/offices/create filament.admin.resources.offices.create ΓÇ║ App\Filament\Resources\OfficeResource\Pages\CreΓÇª
+  GET|HEAD   admin/offices/{record}/edit filament.admin.resources.offices.edit ΓÇ║ App\Filament\Resources\OfficeResource\ΓÇª
+
+       Showing [15] routes
+

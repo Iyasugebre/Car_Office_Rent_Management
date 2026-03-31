@@ -1,0 +1,101 @@
+﻿
+  GET|HEAD        / loginΓÇª
+  GET|HEAD        admin fΓÇª
+  GET|HEAD        admin/agreements filament.admin.resources.agreements.index ΓÇ║ App\Filament\Resources\AgreementResource\Pages\ListΓÇª
+  GET|HEAD        admin/agreements/create filament.admin.resources.agreements.create ΓÇ║ App\Filament\Resources\AgreementResource\PageΓÇª
+  GET|HEAD        admin/agreements/{record}/edit filament.admin.resources.agreements.edit ΓÇ║ App\Filament\Resources\AgreementResoΓÇª
+  GET|HEAD        admin/branch-utilities filament.admin.resources.branch-utilities.index ΓÇ║ App\Filament\Resources\BranchUtilityResource\Pages\LisΓÇª
+  GET|HEAD        admin/branch-utilities/create filament.admin.resources.branch-utilities.create ΓÇ║ App\Filament\Resources\BranchUtilityResource\PaΓÇª
+  GET|HEAD        admin/branch-utilities/{record}/edit filament.admin.resources.branch-utilities.edit ΓÇ║ App\Filament\Resources\BranchUtilityReΓÇª
+  GET|HEAD        admin/cars filament.admin.resources.cars.index ΓÇ║ App\Filament\Resources\CarResource\Pages\ListΓÇª
+  GET|HEAD        admin/cars/create filament.admin.resources.cars.create ΓÇ║ App\Filament\Resources\CarResource\PageΓÇª
+  GET|HEAD        admin/cars/{record}/edit filament.admin.resources.cars.edit ΓÇ║ App\Filament\Resources\CarResoΓÇª
+  GET|HEAD        admin/login filament.admin.auth.login ΓÇ║ Filament\Auth ΓÇ║ ΓÇª
+  POST            admin/logout filament.admin.auth.logout ΓÇ║ Filament\Auth ΓÇ║ LogoutContΓÇª
+  GET|HEAD        admin/offices filament.admin.resources.offices.index ΓÇ║ App\Filament\Resources\OfficeResource\Pages\ListΓÇª
+  GET|HEAD        admin/offices/create filament.admin.resources.offices.create ΓÇ║ App\Filament\Resources\OfficeResource\PageΓÇª
+  GET|HEAD        admin/offices/{record}/edit filament.admin.resources.offices.edit ΓÇ║ App\Filament\Resources\OfficeResoΓÇª
+  GET|HEAD        api/user routes/api.phpΓÇª
+  GET|HEAD        erp admΓÇª
+  GET|HEAD        erp/agreements admin.agreements.index ΓÇ║ Admin\AgreementControllΓÇª
+  POST            erp/agreements admin.agreements.store ΓÇ║ Admin\AgreementControllΓÇª
+  GET|HEAD        erp/agreements/create admin.agreements.create ΓÇ║ Admin\AgreementCoΓÇª
+  GET|HEAD        erp/agreements/{agreement} admin.agreements.show ΓÇ║ Admin\AgreΓÇª
+  PUT|PATCH       erp/agreements/{agreement} admin.agreements.update ΓÇ║ Admin\AgreemΓÇª
+  DELETE          erp/agreements/{agreement} admin.agreements.destroy ΓÇ║ Admin\AgreemeΓÇª
+  POST            erp/agreements/{agreement}/authenticate admin.agreements.authenticate ΓÇ║ AdminΓÇª
+  GET|HEAD        erp/agreements/{agreement}/edit admin.agreements.edit ΓÇ║ AdminΓÇª
+  POST            erp/agreements/{agreement}/renewals admin.renewals.store ΓÇ║ Admin\AgrΓÇª
+  GET|HEAD        erp/agreements/{agreement}/renewals/create admin.renewals.create ΓÇ║ AdmΓÇª
+  GET|HEAD        erp/bookings admin.bookings.index ΓÇ║ Admin\BookingManagerControllerΓÇª
+  POST            erp/bookings admin.bookings.store ΓÇ║ Admin\BookingManagerControllerΓÇª
+  GET|HEAD        erp/bookings/create admin.bookings.create ΓÇ║ Admin\BookingManagerContΓÇª
+  GET|HEAD        erp/bookings/{booking} admin.bookings.show ΓÇ║ Admin\BookingManageΓÇª
+  PUT|PATCH       erp/bookings/{booking} admin.bookings.update ΓÇ║ Admin\BookingManagerCΓÇª
+  DELETE          erp/bookings/{booking} admin.bookings.destroy ΓÇ║ Admin\BookingManagerCoΓÇª
+  GET|HEAD        erp/bookings/{booking}/edit admin.bookings.edit ΓÇ║ Admin\BookingMΓÇª
+  GET|HEAD        erp/branch-requests admin.branch-requests.index ΓÇ║ Admin\BranchRequestConΓÇª
+  POST            erp/branch-requests admin.branch-requests.store ΓÇ║ Admin\BranchRequestConΓÇª
+  GET|HEAD        erp/branch-requests/create admin.branch-requests.create ΓÇ║ Admin\BranchRequΓÇª
+  GET|HEAD        erp/branch-requests/{branch_request} admin.branch-requests.show ΓÇ║ AdmiΓÇª
+  PUT|PATCH       erp/branch-requests/{branch_request} admin.branch-requests.update ΓÇ║ Admin\ΓÇª
+  DELETE          erp/branch-requests/{branch_request} admin.branch-requests.destroy ΓÇ║ Admin\BΓÇª
+  GET|HEAD        erp/branch-requests/{branch_request}/edit admin.branch-requests.edit  ΓÇª
+  GET|HEAD        erp/branch-utilities admin.branch-utilities.index ΓÇ║ Admin\BranchUtilityCoΓÇª
+  POST            erp/branch-utilities admin.branch-utilities.store ΓÇ║ Admin\BranchUtilityCoΓÇª
+  PUT             erp/branch-utilities/{utility} admin.branch-utilities.update ΓÇ║ Admin\BranchΓÇª
+  DELETE          erp/branch-utilities/{utility} admin.branch-utilities.destroy ΓÇ║ Admin\BranchUΓÇª
+  POST            erp/branch-utilities/{utility}/pay admin.branch-utilities.recordPayment ΓÇ║ Admin\BranchUtiΓÇª
+  GET|HEAD        erp/legal-tracker admin.legal-tracker.index ΓÇ║ Admin\VehicleLegalTrackerContrΓÇª
+  PUT             erp/legal-tracker/{car} admin.legal-tracker.update ΓÇ║ Admin\VehicleLegalTrackerΓÇª
+  GET|HEAD        erp/legal-tracker/{car}/edit admin.legal-tracker.edit ΓÇ║ Admin\VehicleLegalΓÇª
+  GET|HEAD        erp/notifications admin.notifications.index ΓÇ║ Admin\NotificationCenterContrΓÇª
+  POST            erp/notifications/mark-all-read admin.notifications.markAllRead ΓÇ║ Admin\NotificationCenΓÇª
+  POST            erp/notifications/{id}/read admin.notifications.markRead ΓÇ║ Admin\NotificationCenterΓÇª
+  GET|HEAD        erp/offices admin.offices.index ΓÇ║ Admin\OfficeManagerController@ΓÇª
+  POST            erp/offices admin.offices.store ΓÇ║ Admin\OfficeManagerController@ΓÇª
+  GET|HEAD        erp/offices/create admin.offices.create ΓÇ║ Admin\OfficeManagerContrΓÇª
+  GET|HEAD        erp/offices/{office} admin.offices.show ΓÇ║ Admin\OfficeManagerCΓÇª
+  PUT|PATCH       erp/offices/{office} admin.offices.update ΓÇ║ Admin\OfficeManagerConΓÇª
+  DELETE          erp/offices/{office} admin.offices.destroy ΓÇ║ Admin\OfficeManagerContΓÇª
+  GET|HEAD        erp/offices/{office}/edit admin.offices.edit ΓÇ║ Admin\OfficeManΓÇª
+  GET|HEAD        erp/renewals admin.renewals.index ΓÇ║ Admin\AgreementRenewalControllerΓÇª
+  POST            erp/renewals/{renewal}/approve admin.renewals.approve ΓÇ║ Admin\AgreementRΓÇª
+  POST            erp/renewals/{renewal}/reject admin.renewals.reject ΓÇ║ Admin\AgreementRΓÇª
+  GET|HEAD        erp/service-tracker admin.service-tracker.index ΓÇ║ Admin\VehicleServiceTrackerConΓÇª
+  GET|HEAD        erp/service-tracker/schedules admin.service-tracker.schedules ΓÇ║ Admin\VehicleServiceTracΓÇª
+  POST            erp/service-tracker/schedules admin.service-tracker.schedules.store ΓÇ║ Admin\VehicleServiceTrackerCΓÇª
+  GET|HEAD        erp/service-tracker/schedules/create admin.service-tracker.schedules.create ΓÇ║ Admin\VehicleServiceTrΓÇª
+  DELETE          erp/service-tracker/schedules/{schedule} admin.service-tracker.schedules.destroy ΓÇ║ Admin\VehicleServicΓÇª
+  POST            erp/service-tracker/schedules/{schedule}/toggle admin.service-tracker.schedules.toggle ΓÇ║ Admin\VehicΓÇª
+  GET|HEAD        erp/service-tracker/{car} admin.service-tracker.show ΓÇ║ Admin\VehicleServiceTraΓÇª
+  POST            erp/service-tracker/{car}/log-service admin.service-tracker.log-service ΓÇ║ Admin\VehicleServΓÇª
+  POST            erp/service-tracker/{car}/update-mileage admin.service-tracker.update-mileage ΓÇ║ Admin\VehicleServΓÇª
+  GET|HEAD        erp/services admin.services.index ΓÇ║ Admin\ServiceRequestControllerΓÇª
+  POST            erp/services admin.services.store ΓÇ║ Admin\ServiceRequestControllerΓÇª
+  GET|HEAD        erp/services/create admin.services.create ΓÇ║ Admin\ServiceRequestContΓÇª
+  GET|HEAD        erp/services/{service} admin.services.show ΓÇ║ Admin\ServiceRequesΓÇª
+  PUT|PATCH       erp/services/{service} admin.services.update ΓÇ║ Admin\ServiceRequestCΓÇª
+  DELETE          erp/services/{service} admin.services.destroy ΓÇ║ Admin\ServiceRequestCoΓÇª
+  POST            erp/services/{service}/assign admin.services.assign ΓÇ║ Admin\ServiceRΓÇª
+  POST            erp/services/{service}/complete admin.services.complete ΓÇ║ Admin\ServiceRΓÇª
+  GET|HEAD        erp/services/{service}/edit admin.services.edit ΓÇ║ Admin\ServiceRΓÇª
+  GET|HEAD        filament/exports/{export}/download filament.exports.download ΓÇ║ FilamΓÇª
+  GET|HEAD        filament/imports/{import}/failed-rows/download filament.imports.failed-rows.download ΓÇ║ FilΓÇª
+  GET|HEAD        livewire-9d7cdfed/css/{component}.css vendor/livewire/livewire/src/Features/SupportCssMΓÇª
+  GET|HEAD        livewire-9d7cdfed/css/{component}.global.css vendor/livewire/livewire/src/Features/SuppΓÇª
+  GET|HEAD        livewire-9d7cdfed/js/{component}.js vendor/livewire/livewire/src/Features/SupportJsMoΓÇª
+  GET|HEAD        livewire-9d7cdfed/livewire.csp.min.js.map Livewire\ΓÇª
+  GET|HEAD        livewire-9d7cdfed/livewire.js Livewire\Mechanisms ΓÇ║ FrontendAssetsΓÇª
+  GET|HEAD        livewire-9d7cdfed/livewire.min.js.map Livewire\MΓÇª
+  GET|HEAD        livewire-9d7cdfed/preview-file/{filename} livewire.preview-file ΓÇ║ Livewire\FeatΓÇª
+  POST            livewire-9d7cdfed/update default-livewire.update ΓÇ║ Livewire\Mechanisms ΓÇ║ HandleReqΓÇª
+  POST            livewire-9d7cdfed/upload-file livewire.upload-file ΓÇ║ Livewire\Features ΓÇ║ FileΓÇª
+  POST            login AΓÇª
+  POST            logout ΓÇª
+  GET|HEAD        storage/{path} storage.local ΓÇ║ vendor/laravel/framework/src/Illuminate/Filesystem/FilesystemServiceProviderΓÇª
+  PUT             storage/{path} storage.local.upload ΓÇ║ vendor/laravel/framework/src/Illuminate/Filesystem/FilesystemServiceProviderΓÇª
+  GET|HEAD        up vendΓÇª
+
+       Showing [97] routes
+

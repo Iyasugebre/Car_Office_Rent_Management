@@ -10,3 +10,4 @@ Artisan::command('inspire', function () {
 
 // Run every day to check for expiring agreements and send notifications
 Schedule::command('agreements:check-expiry')->daily();
+Schedule::command('maintenance:check')->dailyAt('03:00');

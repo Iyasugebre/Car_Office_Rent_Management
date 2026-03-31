@@ -18,6 +18,8 @@ class Agreement extends Model
         'property_address',
         'monthly_rent',
         'payment_schedule',
+        'last_rent_paid_at',
+        'next_rent_due_at',
         'start_date',
         'end_date',
         'contract_path',
@@ -26,6 +28,14 @@ class Agreement extends Model
         'legal_reviewer_id',
         'legal_reviewed_at',
         'legal_remarks',
+    ];
+
+    protected $casts = [
+        'start_date' => 'date',
+        'end_date' => 'date',
+        'last_rent_paid_at' => 'date',
+        'next_rent_due_at' => 'date',
+        'legal_reviewed_at' => 'datetime',
     ];
 
     public function branchRequest()

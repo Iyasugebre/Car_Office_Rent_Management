@@ -1,0 +1,12 @@
+﻿
+  GET|HEAD        admin/cars admin.cars.index ΓÇ║ Admin\CarManagerController@iΓÇª
+  POST            admin/cars admin.cars.store ΓÇ║ Admin\CarManagerController@sΓÇª
+  GET|HEAD        admin/cars/create admin.cars.create ΓÇ║ Admin\CarManagerControΓÇª
+  GET|HEAD        admin/cars/{car} admin.cars.show ΓÇ║ Admin\CarManagerContrΓÇª
+  PUT|PATCH       admin/cars/{car} admin.cars.update ΓÇ║ Admin\CarManagerControlΓÇª
+  DELETE          admin/cars/{car} admin.cars.destroy ΓÇ║ Admin\CarManagerControllΓÇª
+  GET|HEAD        admin/cars/{car}/edit admin.cars.edit ΓÇ║ Admin\CarManagerΓÇª
+  GET|HEAD        admin/cars/{record}/edit filament.admin.resources.cars.edit ΓÇ║ App\Filament\Resources\CarResoΓÇª
+
+        Showing [8] routes
+

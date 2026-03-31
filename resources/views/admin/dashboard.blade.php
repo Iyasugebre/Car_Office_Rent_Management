@@ -127,6 +127,49 @@
         </div>
     </div>
 
+    {{-- Vehicle Service Tracker Widget --}}
+    <div style="background: white; border-radius: 1rem; border: 1px solid var(--border-color); padding: 1.5rem; margin: 0 2rem 1.5rem;">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.25rem;">
+            <div style="display: flex; align-items: center; gap: 0.75rem;">
+                <i data-feather="activity" style="color: var(--primary-color); width: 18px; height: 18px;"></i>
+                <h3 style="margin: 0; font-size: 1.125rem;">Vehicles Due for Service</h3>
+            </div>
+            <a href="{{ route('admin.service-tracker.index') }}" style="color: var(--primary-color); text-decoration: none; font-size: 0.875rem; font-weight: 600;">View Tracker</a>
+        </div>
+
+        @forelse($overdueVehicles as $vehicle)
+            @php
+                $vhc = match($vehicle->service_health) {
+                    'overdue' => ['bg' => '#fef2f2', 'border' => '#fca5a5', 'dot' => '#ef4444', 'text' => '#991b1b', 'label' => 'Overdue'],
+                    'warning' => ['bg' => '#fff7ed', 'border' => '#fed7aa', 'dot' => '#f59e0b', 'text' => '#9a3412', 'label' => 'Approaching'],
+                    default   => ['bg' => '#f0fdf4', 'border' => '#bbf7d0', 'dot' => '#22c55e', 'text' => '#166534', 'label' => 'On Track'],
+                };
+            @endphp
+            <a href="{{ route('admin.service-tracker.show', $vehicle) }}" style="display: flex; justify-content: space-between; align-items: center; padding: 0.75rem; border-radius: 0.625rem; border: 1px solid {{ $vhc['border'] }}; background: {{ $vhc['bg'] }}; margin-bottom: 0.5rem; text-decoration: none; transition: all 0.15s;" onmouseover="this.style.transform='translateX(4px)'" onmouseout="this.style.transform='none'">
+                <div style="display: flex; align-items: center; gap: 0.875rem;">
+                    <div style="width: 8px; height: 8px; border-radius: 50%; background: {{ $vhc['dot'] }}; {{ $vehicle->service_health === 'overdue' ? 'animation: pulse 2s infinite;' : '' }}"></div>
+                    <div>
+                        <div style="font-size: 0.875rem; font-weight: 600; color: #111827;">{{ $vehicle->make }} {{ $vehicle->model }}</div>
+                        <div style="font-size: 0.6875rem; color: #6b7280;">{{ $vehicle->plate_number }} · {{ number_format($vehicle->km_since_service) }} km since service</div>
+                    </div>
+                </div>
+                <span style="font-size: 0.625rem; font-weight: 700; color: {{ $vhc['text'] }}; background: {{ $vhc['dot'] }}15; padding: 0.15rem 0.5rem; border-radius: 999px; border: 1px solid {{ $vhc['dot'] }}30;">{{ $vhc['label'] }}</span>
+            </a>
+        @empty
+            <div style="text-align: center; padding: 2rem; color: var(--text-muted);">
+                <i data-feather="check-circle" style="display: block; margin: 0 auto 0.5rem; width: 24px; height: 24px; color: #10b981;"></i>
+                <div style="font-size: 0.875rem;">All vehicles are within service limits</div>
+            </div>
+        @endforelse
+    </div>
+
+    <style>
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.4; }
+        }
+    </style>
+
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             feather.replace();
